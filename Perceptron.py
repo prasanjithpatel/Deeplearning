@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import datasets
+from sklearn.model_selection import train_test_split 
 
 
 
@@ -42,13 +43,13 @@ class percepton():
 
 neuron=percepton()
 bstr=datasets.load_breast_cancer()
-from sklearn.model_selection import train_test_split 
+
 data=pd.DataFrame(bstr.data,columns=bstr.feature_names)
 data["class"]=bstr.target
 X=data.drop("class",axis=1)
 Y=data["class"]
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y, test_size=0.1,stratify=Y,random_state=1)
-X_train=X_train.values
+X_train=X_train.values  #CONNVERTING INTO NUMPY ARRAYS
 X_test=X_test.values
 neuron.fit(X_train,Y_train,100)
 plt.plot(neuron.w)
