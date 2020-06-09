@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-class percepton():
+class Perceptron():
     def __init__(self):
         self.w=None
         self.b=None
@@ -41,7 +41,7 @@ class percepton():
             
 
 
-neuron=percepton()
+neuron=Perceptron()
 bstr=datasets.load_breast_cancer()
 
 data=pd.DataFrame(bstr.data,columns=bstr.feature_names)
