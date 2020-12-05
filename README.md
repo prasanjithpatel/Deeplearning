@@ -1,7 +1,6 @@
 # Deeplearning
 
-oh shit!why are u  here?
-Is it to know about PERCEPTRON learning algorithm:
+ PERCEPTRON learning algorithm:
 What is perceptron:"https://en.wikipedia.org/wiki/Perceptron"
 
 Bascically single Node taking multiple inputs(real numbers)unlike MP neuron along with weights 
